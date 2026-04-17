@@ -1,0 +1,61 @@
+:root.aws-sso-dark {
+  --aws-sso-dark-filter: invert(1) hue-rotate(180deg) brightness(0.94) contrast(0.92);
+  --aws-sso-dark-bg: #0b1119;
+  color-scheme: dark !important;
+  background: var(--aws-sso-dark-bg) !important;
+}
+
+html.aws-sso-dark {
+  min-height: 100%;
+  background: var(--aws-sso-dark-bg) !important;
+  filter: var(--aws-sso-dark-filter);
+}
+
+html.aws-sso-dark body {
+  min-height: 100%;
+  background: var(--aws-sso-dark-bg) !important;
+}
+
+html.aws-sso-dark img,
+html.aws-sso-dark picture,
+html.aws-sso-dark svg,
+html.aws-sso-dark video,
+html.aws-sso-dark canvas,
+html.aws-sso-dark iframe,
+html.aws-sso-dark [role="img"],
+html.aws-sso-dark [class*="logo"],
+html.aws-sso-dark [id*="logo"],
+html.aws-sso-dark [style*="background-image"] {
+  filter: var(--aws-sso-dark-filter) !important;
+}
+
+html.aws-sso-dark input,
+html.aws-sso-dark textarea,
+html.aws-sso-dark select,
+html.aws-sso-dark button {
+  color-scheme: dark !important;
+}
+
+html.aws-sso-dark ::selection {
+  background: #f59e0b;
+  color: #0b1119;
+}
+
+html.aws-sso-dark ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html.aws-sso-dark ::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+html.aws-sso-dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+  border: 2px solid #111827;
+  border-radius: 999px;
+}
+
+html.aws-sso-dark ::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}

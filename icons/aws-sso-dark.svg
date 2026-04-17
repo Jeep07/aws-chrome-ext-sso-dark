@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="AWS SSO Dark icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)" />
+  <path d="M25 91c14 10 28 15 43 15 14 0 27-4 39-12" fill="none" stroke="#ff9900" stroke-linecap="round" stroke-width="10" />
+  <path d="M92 92l8 3-4 7" fill="none" stroke="#ff9900" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+  <g fill="#f8fafc">
+    <path d="M28 64l8-27h9l8 27h-8l-1-5H36l-1 5zm10-11h5l-2-8z" />
+    <path d="M57 64V37h8v20h10v7z" />
+    <path d="M80 58c2 1 5 2 8 2 3 0 4-1 4-2 0-2-2-2-5-3-5-1-9-4-9-9 0-5 4-10 12-10 4 0 7 1 9 2l-2 6c-1-1-4-2-7-2s-4 1-4 2 2 2 6 3c6 2 8 5 8 9 0 5-4 10-12 10-4 0-8-1-10-2z" />
+  </g>
+</svg>
