@@ -8,7 +8,7 @@ function setStatus(message) {
 async function getActiveTab() {
   const [tab] = await chrome.tabs.query({
     active: true,
-    currentWindow: true
+    currentWindow: true,
   });
 
   if (!tab?.id) {
@@ -27,12 +27,12 @@ async function applyToActiveTab() {
 
     await chrome.scripting.insertCSS({
       target: { tabId: tab.id },
-      files: ["src/theme.css"]
+      files: ["src/theme.css"],
     });
 
     await chrome.scripting.executeScript({
       target: { tabId: tab.id },
-      files: ["src/content.js"]
+      files: ["src/content.js"],
     });
 
     setStatus("Applied. No SSO rerun needed.");

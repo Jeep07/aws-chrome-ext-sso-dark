@@ -3,18 +3,18 @@
     {
       hostPattern: /\.signin\.aws$/i,
       pathPattern: /^\/platform\/[^/]+\/login/i,
-      themeClass: "aws-sso-dark-invert"
+      themeClass: "aws-sso-dark-invert",
     },
     {
       hostPattern: /\.awsapps\.com$/i,
       pathPattern: /^\/start\//i,
-      themeClass: "aws-sso-dark-invert"
+      themeClass: "aws-sso-dark-invert",
     },
     {
       hostPattern: /^(127\.0\.0\.1|localhost)$/i,
       pathPattern: /^\/oauth\/callback/i,
-      themeClass: "aws-sso-dark-loopback"
-    }
+      themeClass: "aws-sso-dark-loopback",
+    },
   ];
 
   function getThemeClass(locationLike) {
@@ -57,7 +57,7 @@
 
     window.__awsSsoDarkObserver.observe(document, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
   }
 

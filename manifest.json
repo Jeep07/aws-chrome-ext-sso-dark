@@ -18,10 +18,7 @@
       "48": "icons/aws-sso-dark-48.png"
     }
   },
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": ["activeTab", "scripting"],
   "host_permissions": [
     "https://*.signin.aws/*",
     "https://*.awsapps.com/*",
@@ -36,12 +33,8 @@
         "http://127.0.0.1/*",
         "http://localhost/*"
       ],
-      "css": [
-        "src/theme.css"
-      ],
-      "js": [
-        "src/content.js"
-      ],
+      "css": ["src/theme.css"],
+      "js": ["src/content.js"],
       "run_at": "document_start"
     }
   ]

@@ -2,14 +2,20 @@
   color-scheme: dark;
   background: #0b1119;
   color: #e5e7eb;
-  font: 14px/1.4 ui-sans-serif, system-ui, sans-serif;
+  font:
+    14px/1.4 ui-sans-serif,
+    system-ui,
+    sans-serif;
 }
 
 body {
   margin: 0;
   min-width: 240px;
-  background:
-    radial-gradient(circle at top right, rgba(255, 153, 0, 0.18), transparent 8rem),
+  background: radial-gradient(
+      circle at top right,
+      rgba(255, 153, 0, 0.18),
+      transparent 8rem
+    ),
     #0b1119;
 }
 

@@ -1,5 +1,6 @@
 :root.aws-sso-dark {
-  --aws-sso-dark-filter: invert(1) hue-rotate(180deg) brightness(0.94) contrast(0.92);
+  --aws-sso-dark-filter: invert(1) hue-rotate(180deg) brightness(0.94)
+    contrast(0.92);
   --aws-sso-dark-bg: #0b1119;
   --aws-sso-dark-panel: #111827;
   --aws-sso-dark-border: #273244;
@@ -34,8 +35,11 @@ html.aws-sso-dark-invert [style*="background-image"] {
 html.aws-sso-dark-loopback,
 html.aws-sso-dark-loopback body {
   min-height: 100%;
-  background:
-    radial-gradient(circle at top, rgba(255, 153, 0, 0.14), transparent 34rem),
+  background: radial-gradient(
+      circle at top,
+      rgba(255, 153, 0, 0.14),
+      transparent 34rem
+    ),
     var(--aws-sso-dark-bg) !important;
   color: var(--aws-sso-dark-text) !important;
 }
