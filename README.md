@@ -31,6 +31,18 @@ The extension injects a content script at `document_start`, tags supported pages
 3. Click **Load unpacked**.
 4. Select the project folder you cloned or extracted locally.
 
+## Local development
+
+When tweaking the theme, keep the AWS callback tab open:
+
+1. Edit the extension files.
+2. Click **Reload** for the unpacked extension in `chrome://extensions`.
+3. Return to the AWS SSO or callback tab.
+4. Click the AWS SSO Dark extension icon.
+5. Click **Apply to this tab**.
+
+This reinjects the latest local `src/theme.css` and reruns `src/content.js`, so you can iterate without starting another SSO flow.
+
 ## Notes
 
 - This is intended for local use and easy open-sourcing.
