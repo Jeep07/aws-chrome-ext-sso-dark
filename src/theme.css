@@ -49,8 +49,73 @@ html.aws-sso-dark-loopback body * {
   color: inherit !important;
 }
 
+html.aws-sso-dark-loopback img,
+html.aws-sso-dark-loopback svg {
+  filter: brightness(0) invert(1) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35)) !important;
+  opacity: 0.92 !important;
+}
+
 html.aws-sso-dark-loopback a {
   color: var(--aws-sso-dark-accent) !important;
+}
+
+html.aws-sso-dark-loopback .flex-container {
+  background: rgba(17, 24, 39, 0.96) !important;
+  border: 1px solid var(--aws-sso-dark-border) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45) !important;
+  color: var(--aws-sso-dark-text) !important;
+}
+
+html.aws-sso-dark-loopback #approved-auth,
+html.aws-sso-dark-loopback #denied-auth {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--aws-sso-dark-text) !important;
+}
+
+html.aws-sso-dark-loopback .request {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border: 1px solid var(--aws-sso-dark-border) !important;
+  color: var(--aws-sso-dark-text) !important;
+}
+
+html.aws-sso-dark-loopback .request.approval {
+  background: rgba(5, 150, 105, 0.16) !important;
+  border-color: rgba(52, 211, 153, 0.55) !important;
+}
+
+html.aws-sso-dark-loopback .request.denial {
+  background: rgba(220, 38, 38, 0.14) !important;
+  border-color: rgba(248, 113, 113, 0.55) !important;
+}
+
+html.aws-sso-dark-loopback .request-container,
+html.aws-sso-dark-loopback .request-container h4,
+html.aws-sso-dark-loopback .request-container p,
+html.aws-sso-dark-loopback .hint,
+html.aws-sso-dark-loopback #footerText,
+html.aws-sso-dark-loopback #approvalMessage,
+html.aws-sso-dark-loopback #errorMessage {
+  color: var(--aws-sso-dark-text) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+html.aws-sso-dark-loopback .hint,
+html.aws-sso-dark-loopback #footerText,
+html.aws-sso-dark-loopback #approvalMessage,
+html.aws-sso-dark-loopback #errorMessage {
+  color: var(--aws-sso-dark-muted) !important;
+}
+
+html.aws-sso-dark-loopback .success-icon {
+  color: #34d399 !important;
+}
+
+html.aws-sso-dark-loopback .denial-icon {
+  color: #f87171 !important;
 }
 
 html.aws-sso-dark-loopback button,
