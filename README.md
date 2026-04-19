@@ -4,7 +4,7 @@ Small unpacked Chrome extension that forces AWS SSO login surfaces into dark mod
 
 ## Region coverage
 
-This is not tied to `us-east-2` etc. should be good across all regions.
+This is not tied to `us-east-2`; it should work across AWS regions that use the same SSO URL patterns.
 
 - `https://*.signin.aws/...` covers AWS sign-in hosts across regions that use the standard `signin.aws` pattern.
 - `https://*.awsapps.com/...` covers AWS access portal pages across regions.
@@ -19,7 +19,10 @@ This is not tied to `us-east-2` etc. should be good across all regions.
 
 ## How it works
 
-The extension injects a content script at `document_start`, tags supported pages, and applies a filter-based dark theme with reinversion for logos and image-like content.
+The extension injects a content script at `document_start`, tags supported pages, and applies the right dark-mode strategy for each surface:
+
+- AWS-hosted sign-in pages use a filter-based dark theme with reinversion for logos and image-like content.
+- Local loopback OAuth callback pages use explicit dark CSS so the full browser viewport goes dark, not just the success message.
 
 ## Load locally
 
@@ -27,6 +30,35 @@ The extension injects a content script at `document_start`, tags supported pages
 2. Enable **Developer mode**.
 3. Click **Load unpacked**.
 4. Select the project folder you cloned or extracted locally.
+
+## Local development
+
+Install dependencies once:
+
+```sh
+npm install
+npm run hooks:install
+```
+
+When tweaking the theme, keep the AWS callback tab open:
+
+1. Edit the extension files.
+2. Click **Reload** for the unpacked extension in `chrome://extensions`.
+3. Return to the AWS SSO or callback tab.
+4. Click the AWS SSO Dark extension icon.
+5. Click **Apply to this tab**.
+
+This reinjects the latest local `src/theme.css` and reruns `src/content.js`, so you can iterate without starting another SSO flow.
+
+## Checks
+
+Run the same checks locally that GitHub Actions runs:
+
+```sh
+npm run check
+```
+
+That verifies Prettier formatting, manifest JSON, JavaScript syntax, and a small obvious-secret pattern scan.
 
 ## Notes
 
