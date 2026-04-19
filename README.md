@@ -33,6 +33,13 @@ The extension injects a content script at `document_start`, tags supported pages
 
 ## Local development
 
+Install dependencies once:
+
+```sh
+npm install
+npm run hooks:install
+```
+
 When tweaking the theme, keep the AWS callback tab open:
 
 1. Edit the extension files.
@@ -42,6 +49,16 @@ When tweaking the theme, keep the AWS callback tab open:
 5. Click **Apply to this tab**.
 
 This reinjects the latest local `src/theme.css` and reruns `src/content.js`, so you can iterate without starting another SSO flow.
+
+## Checks
+
+Run the same checks locally that GitHub Actions runs:
+
+```sh
+npm run check
+```
+
+That verifies Prettier formatting, manifest JSON, JavaScript syntax, and a small obvious-secret pattern scan.
 
 ## Notes
 

@@ -1,0 +1,19 @@
+{
+  "name": "aws-chrome-ext-sso-dark",
+  "version": "0.1.2",
+  "private": true,
+  "description": "Dark mode for AWS SSO pages, so re-auth at 6 AM does not flashbang you.",
+  "license": "MIT",
+  "scripts": {
+    "check": "npm run format:check && npm run validate:manifest && npm run validate:js && npm run scan:secrets",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "hooks:install": "git config core.hooksPath .githooks",
+    "scan:secrets": "node scripts/scan-secrets.js",
+    "validate:js": "node --check src/content.js && node --check src/popup.js",
+    "validate:manifest": "python3 -m json.tool manifest.json > /dev/null"
+  },
+  "devDependencies": {
+    "prettier": "3.3.3"
+  }
+}
