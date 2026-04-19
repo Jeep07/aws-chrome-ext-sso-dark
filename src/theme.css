@@ -1,32 +1,74 @@
 :root.aws-sso-dark {
   --aws-sso-dark-filter: invert(1) hue-rotate(180deg) brightness(0.94) contrast(0.92);
   --aws-sso-dark-bg: #0b1119;
+  --aws-sso-dark-panel: #111827;
+  --aws-sso-dark-border: #273244;
+  --aws-sso-dark-text: #e5e7eb;
+  --aws-sso-dark-muted: #9ca3af;
+  --aws-sso-dark-accent: #ff9900;
   color-scheme: dark !important;
-  background: var(--aws-sso-dark-bg) !important;
 }
 
-html.aws-sso-dark {
+html.aws-sso-dark-invert {
   min-height: 100%;
-  background: var(--aws-sso-dark-bg) !important;
   filter: var(--aws-sso-dark-filter);
 }
 
-html.aws-sso-dark body {
+html.aws-sso-dark-invert body {
   min-height: 100%;
-  background: var(--aws-sso-dark-bg) !important;
 }
 
-html.aws-sso-dark img,
-html.aws-sso-dark picture,
-html.aws-sso-dark svg,
-html.aws-sso-dark video,
-html.aws-sso-dark canvas,
-html.aws-sso-dark iframe,
-html.aws-sso-dark [role="img"],
-html.aws-sso-dark [class*="logo"],
-html.aws-sso-dark [id*="logo"],
-html.aws-sso-dark [style*="background-image"] {
+html.aws-sso-dark-invert img,
+html.aws-sso-dark-invert picture,
+html.aws-sso-dark-invert svg,
+html.aws-sso-dark-invert video,
+html.aws-sso-dark-invert canvas,
+html.aws-sso-dark-invert iframe,
+html.aws-sso-dark-invert [role="img"],
+html.aws-sso-dark-invert [class*="logo"],
+html.aws-sso-dark-invert [id*="logo"],
+html.aws-sso-dark-invert [style*="background-image"] {
   filter: var(--aws-sso-dark-filter) !important;
+}
+
+html.aws-sso-dark-loopback,
+html.aws-sso-dark-loopback body {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(255, 153, 0, 0.14), transparent 34rem),
+    var(--aws-sso-dark-bg) !important;
+  color: var(--aws-sso-dark-text) !important;
+}
+
+html.aws-sso-dark-loopback body {
+  margin: 0 !important;
+}
+
+html.aws-sso-dark-loopback body * {
+  border-color: var(--aws-sso-dark-border) !important;
+  color: inherit !important;
+}
+
+html.aws-sso-dark-loopback a {
+  color: var(--aws-sso-dark-accent) !important;
+}
+
+html.aws-sso-dark-loopback button,
+html.aws-sso-dark-loopback input,
+html.aws-sso-dark-loopback textarea,
+html.aws-sso-dark-loopback select {
+  background: var(--aws-sso-dark-panel) !important;
+  border-color: var(--aws-sso-dark-border) !important;
+  color: var(--aws-sso-dark-text) !important;
+}
+
+html.aws-sso-dark-loopback [style*="background: white"],
+html.aws-sso-dark-loopback [style*="background-color: white"],
+html.aws-sso-dark-loopback [style*="background:#fff"],
+html.aws-sso-dark-loopback [style*="background-color:#fff"],
+html.aws-sso-dark-loopback [style*="background: #fff"],
+html.aws-sso-dark-loopback [style*="background-color: #fff"] {
+  background: var(--aws-sso-dark-panel) !important;
 }
 
 html.aws-sso-dark input,
