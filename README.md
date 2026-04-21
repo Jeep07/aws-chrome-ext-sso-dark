@@ -13,7 +13,7 @@ This is not tied to `us-east-2`; it should work across AWS regions that use the 
 ## URL coverage
 
 - `https://*.signin.aws/platform/*/login*`
-- `https://*.awsapps.com/start/*`
+- `https://*.awsapps.com/start/*` when the URL hash includes SSO callback parameters
 - `http://127.0.0.1:<any-port>/oauth/callback*`
 - `http://localhost:<any-port>/oauth/callback*`
 

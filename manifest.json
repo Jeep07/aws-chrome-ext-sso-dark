@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "AWS SSO Dark",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Dark mode for AWS SSO pages, so re-auth at 6 AM does not flashbang you.",
   "icons": {
     "16": "icons/aws-sso-dark-16.png",
